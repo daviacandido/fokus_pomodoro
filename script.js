@@ -4,13 +4,17 @@ const btnCurto = document.querySelector(".app__card-button--curto");
 const btnLongo = document.querySelector(".app__card-button--longo");
 
 btnFoco.addEventListener("click", () => {
-  html.setAttribute("data-contexto", "foco");
+  alterarContexto("foco");
 });
 
 btnCurto.addEventListener("click", () => {
-  html.setAttribute("data-contexto", "descanso-curto");
+  alterarContexto("descanso-curto");
 });
 
 btnLongo.addEventListener("click", () => {
-  html.setAttribute("data-contexto", "descanso-longo");
+  alterarContexto("descanso-longo");
 });
+
+function alterarContexto(contexto) {
+  html.setAttribute("data-contexto", contexto);
+}
